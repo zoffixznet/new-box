@@ -1,7 +1,7 @@
 # new-box
 Personal install steps to init a new box
 
-##### Main
+## Main
 
 *Initial steps missing*
 
@@ -31,7 +31,7 @@ echo 'source ~/.bash_aliases' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-#### Manual
+## Manual
 
 - [Download Atom](https://atom.io/)
 - [Download Chrome](https://www.google.ca/chrome/)
@@ -41,12 +41,16 @@ cd ~/Downloads
 sudo apt install -fy ./atom* ./chrome*
 ```
 
-#### Keys
+## Keys
 
-###### System
+### System
 
 - `Win+R` - Run Everything
 - `Win+G` - Run Command: `gimp`
 - `Shift+Alt+Z` - Run Command: `gnome-terminal`
 - `Ctrl+Shift+F` - Window State: Maximize
 - `Ctrl+Shift+Alt+F` - Window State: Maximize Horizontal
+
+## Atom
+
+- Install package `sync-settings` and setup the settings using values from other setups. Then go to "Packages→Synchronize Settings→Restore"
