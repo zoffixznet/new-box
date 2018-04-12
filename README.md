@@ -24,11 +24,19 @@ echo 'alias update-perl6='\''
     git checkout $(git describe --abbrev=0 --tags) &&
     perl Configure.pl --gen-moar --gen-nqp --backends=moar &&
     make && make install'\''' >> ~/.bashrc
-
 wget https://temp.perl6.party/.bash_aliases
 echo 'source ~/.bash_aliases' >> ~/.bashrc
-
 source ~/.bashrc
+
+perlbrew install perl-5.26.1 --notest -Duseshrplib -Dusemultiplicity
+perlbrew switch perl-5.26.1
+perlbrew install-cpanm
+
+update-perl6
+git clone https://github.com/ugexe/zef /tmp/zef
+perl6 -I/tmp/zef/ /tmp/zef/bin/zef install /tmp/zef/
+
+zef install Inline::Perl5 WWW
 ```
 
 ## Manual
