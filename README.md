@@ -1,7 +1,7 @@
 # new-box
 Personal install steps to init a new box
 
-####### Main
+##### Main
 
 *Initial steps missing*
 
