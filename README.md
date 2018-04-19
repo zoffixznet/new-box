@@ -62,3 +62,8 @@ sudo apt install -fy ./atom* ./chrome*
 ## Atom
 
 - Install package `sync-settings` and setup the settings using values from other setups. Then go to "Packages→Synchronize Settings→Restore"
+
+
+## Trouble-Shooting
+
+Glitches with virtual box not loading after reboot: likely a failed video driver. Uninstall all `virtualbox*` Bodhi's packages, then mount the Guest CD from VirtualBox's menus, `sudo mount /dev/cdrom /media/cdrom; cd /media/cdrom` and then run the guest installer from there.
