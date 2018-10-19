@@ -9,7 +9,7 @@ Personal install steps to init a new box
 sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get -y install build-essential git curl aptitude libssl-dev \
-        wget htop zip sqlite3 time gimp dolphin gnome-terminal
+        wget htop zip sqlite3 time gimp dolphin gnome-terminal libcwd-guard-perl
 
 #
 # Install Perls and load aliases
