@@ -28,8 +28,8 @@ wget https://temp.perl6.party/.bash_aliases
 echo 'source ~/.bash_aliases' >> ~/.bashrc
 source ~/.bashrc
 
-perlbrew install perl-5.28.0 --notest -Duseshrplib -Dusemultiplicity
-perlbrew switch perl-5.28.0
+perlbrew install perl-5.30.0 --notest -Duseshrplib -Dusemultiplicity
+perlbrew switch perl-5.30.0
 perlbrew install-cpanm
 
 update-perl6
