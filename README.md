@@ -1,7 +1,9 @@
 # new-box
 Personal install steps to init a new box
 
-## Create User
+## Initial Setup
+
+User:
 
 ```bash
 adduser zoffix
@@ -13,11 +15,22 @@ chmod 600 ~/.ssh/authorized_keys
 cat > ~/.ssh/authorized_keys # paste keys
 ```
 
-## Hostname
+Hostname:
 
 ```bash
 sudo pico /etc/hostname # enter hostname
 sudo pico /etc/hosts    # add it to localhost address
+```
+
+Keyed SSH (disable passwords and root login):
+
+```bash
+sudo pico /etc/ssh/sshd_config
+# Open above config file and set these options:
+ChallengeResponseAuthentication no
+PasswordAuthentication no
+UsePAM no
+PermitRootLogin no
 ```
 
 ## Main
