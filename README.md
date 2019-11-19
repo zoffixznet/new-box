@@ -13,6 +13,13 @@ chmod 600 ~/.ssh/authorized_keys
 cat > ~/.ssh/authorized_keys # paste keys
 ```
 
+## Hostname
+
+```bash
+sudo pico /etc/hostname # enter hostname
+sudo pico /etc/hosts    # add it to localhost address
+```
+
 ## Main
 
 *Initial steps missing*
