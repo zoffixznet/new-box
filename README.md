@@ -1,6 +1,18 @@
 # new-box
 Personal install steps to init a new box
 
+## Create User
+
+```bash
+adduser zoffix
+usermod -aG sudo zoffix
+su zoffix
+ssh-keygen -t rsa -b 4096 -C 'Box Name'
+touch ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+cat > ~/.ssh/authorized_keys # paste keys
+```
+
 ## Main
 
 *Initial steps missing*
