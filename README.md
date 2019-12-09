@@ -33,6 +33,10 @@ UsePAM no
 PermitRootLogin no
 ```
 
+```
+sudo service sshd restart
+```
+
 ## Main
 
 *Initial steps missing*
