@@ -64,6 +64,8 @@ wget https://temp.perl6.party/.bash_aliases
 echo 'source ~/.bash_aliases' >> ~/.bashrc
 source ~/.bashrc
 
+echo -e "set tabsize 4\nset tabstospaces" > ~/.nanorc
+
 perlbrew install perl-5.30.1 --notest -Duseshrplib -Dusemultiplicity
 perlbrew switch perl-5.30.1
 perlbrew install-cpanm
