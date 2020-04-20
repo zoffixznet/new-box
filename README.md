@@ -66,8 +66,8 @@ source ~/.bashrc
 
 echo -e "set tabsize 4\nset tabstospaces" > ~/.nanorc
 
-perlbrew install perl-5.30.1 --notest -Duseshrplib -Dusemultiplicity
-perlbrew switch perl-5.30.1
+perlbrew install perl-5.30.2 --notest -Duseshrplib -Dusemultiplicity
+perlbrew switch perl-5.30.2
 perlbrew install-cpanm
 
 update-perl6
