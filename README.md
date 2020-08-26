@@ -101,6 +101,32 @@ sudo apt install -fy ./atom* ./chrome*
 
 - Install package `sync-settings` and setup the settings using values from other setups. Then go to "Packages→Synchronize Settings→Restore"
 
+## Restricted `scp`-Only Accounts
+
+```bash
+sudo apt install rssh
+# Edit /etc/rssh.conf to uncomment allowscp
+
+sudo useradd -d /home/<RESTRICTED-USER> -m -s /usr/bin/rssh <RESTRICTED-USER>
+sudo usermod -a -G <RESTRICTED-USER> zoffix
+
+sudo su
+cd /home/<RESTRICTED-USER>/
+
+mkdir .ssh
+ssh-keygen -t rsa -b 4096 -C 'XCite Live Host'
+# Enter:
+# /home/<RESTRICTED-USER>/.ssh/id_rsa
+
+chown -R <RESTRICTED-USER>:<RESTRICTED-USER> /home/<RESTRICTED-USER>/.ssh
+chmod -R 400 /home/<RESTRICTED-USER>
+chmod 500 /home/<RESTRICTED-USER>
+chmod 500 /home/<RESTRICTED-USER>/.ssh
+
+mkdir <TARGET-SCP-DIR>
+chmod 770 <TARGET-SCP-DIR>
+chown <RESTRICTED-USER>:<RESTRICTED-USER> <TARGET-SCP-DIR>
+```
 
 ## Trouble-Shooting
 
