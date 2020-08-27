@@ -136,8 +136,10 @@ cd bin
 mkdir impacket
 cd 
 git clone https://github.com/SecureAuthCorp/impacket .
+git checkout $(git describe --abbrev=0 --tags)
 pip3 install .
 chmod +x examples/*
+sed -i "1s/\bpython\b/python3/" examples/*
 echo 'export PATH="$HOME/bin/impacket/examples:$PATH"' >> ~/.bashrc
 ```
 
