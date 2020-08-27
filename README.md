@@ -131,6 +131,7 @@ chown <RESTRICTED-USER>:<RESTRICTED-USER> <TARGET-SCP-DIR>
 ## Kali Setup
 
 ```
+# Setup Impacket tools
 sudo apt-get install python3-pip
 cd bin
 mkdir impacket
