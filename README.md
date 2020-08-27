@@ -132,12 +132,13 @@ chown <RESTRICTED-USER>:<RESTRICTED-USER> <TARGET-SCP-DIR>
 
 ```
 sudo apt-get install python3-pip
-t
+cd bin
+mkdir impacket
+cd 
 git clone https://github.com/SecureAuthCorp/impacket .
 pip3 install .
-cp -R examples ~/bin/impacket
-chmod +x ~/bin/impacket/*
-echo 'export PATH="$HOME/bin/impacket:$PATH"' >> ~/.bashrc
+chmod +x examples/*
+echo 'export PATH="$HOME/bin/impacket/examples:$PATH"' >> ~/.bashrc
 ```
 
 ## Trouble-Shooting
