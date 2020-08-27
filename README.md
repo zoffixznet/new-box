@@ -136,7 +136,8 @@ t
 git clone https://github.com/SecureAuthCorp/impacket .
 pip3 install .
 cp -R examples ~/bin/impacket
-chomod +x ~/bin/impacket/*
+chmod +x ~/bin/impacket/*
+echo 'export PATH="$HOME/bin/impacket:$PATH"' >> ~/.bashrc
 ```
 
 ## Trouble-Shooting
