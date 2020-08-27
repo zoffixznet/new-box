@@ -128,6 +128,17 @@ chmod 770 <TARGET-SCP-DIR>
 chown <RESTRICTED-USER>:<RESTRICTED-USER> <TARGET-SCP-DIR>
 ```
 
+## Kali Setup
+
+```
+sudo apt-get install python3-pip
+t
+git clone https://github.com/SecureAuthCorp/impacket .
+pip3 install .
+cp -R examples ~/bin/impacket
+chomod +x ~/bin/impacket/*
+```
+
 ## Trouble-Shooting
 
 Glitches with virtual box not loading after reboot: likely a failed video driver. Uninstall all `virtualbox*` Bodhi's packages, then mount the Guest CD from VirtualBox's menus, `sudo mount /dev/cdrom /media/cdrom; cd /media/cdrom` and then run the guest installer from there.
