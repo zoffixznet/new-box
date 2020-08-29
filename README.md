@@ -136,7 +136,7 @@ For various tooling tips, see [Kali-Tips.md](Kali-Tips.md)
 sudo apt-get install ufw python3-pip rlwrap
 
 # Setup Impacket tools
-cd bin
+cd ~bin
 mkdir impacket
 cd 
 git clone https://github.com/SecureAuthCorp/impacket .
@@ -145,6 +145,11 @@ pip3 install .
 chmod +x examples/*
 sed -i "1s/\bpython\b/python3/" examples/*
 echo 'export PATH="$HOME/bin/impacket/examples:$PATH"' >> ~/.bashrc
+
+# Setup dirsearch tool
+cd ~/bin
+git clone https://github.com/maurosoria/dirsearch.git dirsearch
+ln -s ~/bin/dirsearch/dirsearch.py ~/bin/dirsearch.py
 ```
 
 ## Trouble-Shooting
