@@ -45,7 +45,8 @@ sudo service sshd restart
 sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get -y install build-essential git curl aptitude libssl-dev \
-        wget htop zip sqlite3 time gimp dolphin gnome-terminal libcwd-guard-perl tree dnsutils
+        wget htop zip sqlite3 time gimp dolphin gnome-terminal libcwd-guard-perl tree dnsutils \
+        libglib2.0-0 libx11-6 libcairo2 libpango-1.0-0 libpangocairo-1.0-0 libgtk2.0-0 # packages for Sublime Text
 
 #
 # Install Perls and load aliases
@@ -151,6 +152,14 @@ cd ~/bin
 git clone https://github.com/maurosoria/dirsearch.git dirsearch
 ln -s ~/bin/dirsearch/dirsearch.py ~/bin/dirsearch.py
 ```
+
+#### Desktop Config
+
+* Set `Shift+Alt+Z` for terminal in Settings->Keyboard Application Shortcuts
+* Set `Super->Up/Down/Left/Right` for Window tiling Up/Down/Left/Right in Settings->Window Manager->Keyboard
+* Set `Super+Ctrl->Left/Right` for Window tiling Up-Left/Up-Right in Settings->Window Manager->Keyboard
+* Set `Super+Ctrl+Alt->Left/Right` for Window tiling Down-Left/Down-Right in Settings->Window Manager->Keyboard
+
 
 ## Trouble-Shooting
 
