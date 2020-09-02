@@ -138,7 +138,7 @@ sudo apt-get install ufw python3-pip rlwrap
 # Setup Impacket tools
 cd ~/bin/
 mkdir impacket
-cd 
+cd impacket
 git clone https://github.com/SecureAuthCorp/impacket .
 git checkout $(git describe --abbrev=0 --tags)
 pip3 install .
