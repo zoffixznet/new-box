@@ -45,7 +45,8 @@ sudo service sshd restart
 sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get -y install build-essential git curl aptitude libssl-dev \
-        wget htop zip sqlite3 time gimp dolphin gnome-terminal libcwd-guard-perl tree dnsutils
+        wget htop zip sqlite3 time gimp dolphin gnome-terminal libcwd-guard-perl \
+        tree dnsutils sshfs
 #
 # Install Perls and load aliases
 #
