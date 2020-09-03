@@ -150,6 +150,11 @@ echo 'export PATH="$HOME/bin/impacket/examples:$PATH"' >> ~/.bashrc
 cd ~/bin
 git clone https://github.com/maurosoria/dirsearch.git dirsearch
 ln -s ~/bin/dirsearch/dirsearch.py ~/bin/dirsearch.py
+
+# Setup QTerminal theme color changes for executables
+sudo cp /usr/share/qtermwidget5/color-schemes/Kali-Dark.colorscheme /usr/share/qtermwidget5/color-schemes/Zoffix-Dark.colorscheme
+sudo sed -i '/\[Color2Intense\]/!b;n;cColor=255,242,0' /usr/share/qtermwidget5/color-schemes/Zoffix-Dark.colorscheme
+# Open QTerminal and tell it to use Zoffix-Dark Theme
 ```
 
 #### Desktop Config
