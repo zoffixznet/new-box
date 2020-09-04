@@ -33,7 +33,7 @@ UsePAM no
 PermitRootLogin no
 ```
 
-```
+```bash
 sudo service sshd restart
 ```
 
