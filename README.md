@@ -132,7 +132,7 @@ chown <RESTRICTED-USER>:<RESTRICTED-USER> <TARGET-SCP-DIR>
 
 For various tooling tips, see [Kali-Tips.md](Kali-Tips.md)
 
-```
+```bash
 sudo apt-get install ufw python3-pip rlwrap
 
 # Setup Impacket tools
