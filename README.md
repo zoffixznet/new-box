@@ -175,6 +175,10 @@ git clone https://github.com/ZerBea/hcxtools.git .
 make
 sudo make install
 
+# Only needed for the above if wifite is still looking for non-"ng" hcxpcaptool
+sudo ln -s /usr/local/bin/hcxpcapngtool /usr/local/bin/hcxpcaptool
+
+
 # Wordlist
 mkdir ~/wargaming/
 cd ~/wargaming/
