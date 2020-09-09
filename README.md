@@ -151,6 +151,16 @@ cd ~/bin
 git clone https://github.com/maurosoria/dirsearch.git dirsearch
 ln -s ~/bin/dirsearch/dirsearch.py ~/bin/dirsearch.py
 
+# Setup Pyrit (optional req for wifite)
+t
+sudo apt-get install python-dev libssl-dev python3-zlib-wrapper libpcap-dev
+sudo pip3 install psycopg2 scapy                
+git clone https://github.com/JPaulMora/Pyrit.git .
+python setup.py clean
+python setup.py build
+sudo python setup.py install
+
+
 # Setup QTerminal theme color changes for executables
 sudo cp /usr/share/qtermwidget5/color-schemes/Kali-Dark.colorscheme /usr/share/qtermwidget5/color-schemes/Zoffix-Dark.colorscheme
 sudo sed -i '/\[Color2Intense\]/!b;n;cColor=255,242,0' /usr/share/qtermwidget5/color-schemes/Zoffix-Dark.colorscheme
