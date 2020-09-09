@@ -152,9 +152,9 @@ git clone https://github.com/maurosoria/dirsearch.git dirsearch
 ln -s ~/bin/dirsearch/dirsearch.py ~/bin/dirsearch.py
 
 # Setup Pyrit (optional req for wifite)
-t
 sudo apt-get install python-dev libssl-dev python3-zlib-wrapper libpcap-dev
 sudo pip3 install psycopg2 scapy                
+t
 git clone https://github.com/JPaulMora/Pyrit.git .
 python setup.py clean
 python setup.py build
