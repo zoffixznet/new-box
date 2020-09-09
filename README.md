@@ -151,8 +151,9 @@ cd ~/bin
 git clone https://github.com/maurosoria/dirsearch.git dirsearch
 ln -s ~/bin/dirsearch/dirsearch.py ~/bin/dirsearch.py
 
-# Setup Pyrit (optional req for wifite)
-sudo apt-get install python-dev libssl-dev python3-zlib-wrapper libpcap-dev
+
+# Setup pyrit (optional req for wifite)
+sudo apt-get install python-dev libssl-dev zlib1g-dev libpcap-dev
 sudo pip3 install psycopg2 scapy                
 t
 git clone https://github.com/JPaulMora/Pyrit.git .
@@ -160,6 +161,19 @@ python setup.py clean
 python setup.py build
 sudo python setup.py install
 
+# Setup hcxdumptool (optional req for wifite)
+sudo apt-get install libcurl4-openssl-dev libssl-dev
+t
+git clone https://github.com/ZerBea/hcxdumptool.git .
+make
+sudo make install
+
+# Setup hcxpcaptool (optional req for wifite)
+sudo apt-get install libcurl4-openssl-dev libssl-dev zlib1g-dev
+t
+git clone https://github.com/ZerBea/hcxtools.git .
+make
+sudo make install
 
 # Wordlist
 mkdir ~/wargaming/
