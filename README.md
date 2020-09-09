@@ -161,6 +161,12 @@ python setup.py build
 sudo python setup.py install
 
 
+# Wordlist
+mkdir ~/wargaming/
+cd ~/wargaming/
+cp cp /usr/share/wordlists/rockyou.txt.gz .
+gunzip rockyou.txt.gz
+
 # Setup QTerminal theme color changes for executables
 sudo cp /usr/share/qtermwidget5/color-schemes/Kali-Dark.colorscheme /usr/share/qtermwidget5/color-schemes/Zoffix-Dark.colorscheme
 sudo sed -i '/\[Color2Intense\]/!b;n;cColor=255,242,0' /usr/share/qtermwidget5/color-schemes/Zoffix-Dark.colorscheme
