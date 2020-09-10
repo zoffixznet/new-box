@@ -118,6 +118,8 @@ ssh-keygen -t rsa -b 4096 -C 'XCite Live Host'
 # Enter:
 # /home/<RESTRICTED-USER>/.ssh/id_rsa
 
+touch /home/<RESTRICTED-USER>/.ssh/authorized_keys
+# Enter KEYS to authorized_keys
 chown -R <RESTRICTED-USER>:<RESTRICTED-USER> /home/<RESTRICTED-USER>/.ssh
 chmod -R 400 /home/<RESTRICTED-USER>
 chmod 500 /home/<RESTRICTED-USER>
