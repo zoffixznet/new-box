@@ -130,69 +130,6 @@ chmod 770 <TARGET-SCP-DIR>
 chown <RESTRICTED-USER>:<RESTRICTED-USER> <TARGET-SCP-DIR>
 ```
 
-## Kali Setup
-
-For various tooling tips, see [Kali-Tips.md](Kali-Tips.md)
-
-```bash
-sudo apt-get install ufw python3-pip rlwrap
-
-# Setup Impacket tools
-cd ~/bin/
-mkdir impacket
-cd impacket
-git clone https://github.com/SecureAuthCorp/impacket .
-git checkout $(git describe --abbrev=0 --tags)
-pip3 install .
-chmod +x examples/*
-sed -i "1s/\bpython\b/python3/" examples/*
-echo 'export PATH="$HOME/bin/impacket/examples:$PATH"' >> ~/.bashrc
-
-# Setup dirsearch tool
-cd ~/bin
-git clone https://github.com/maurosoria/dirsearch.git dirsearch
-ln -s ~/bin/dirsearch/dirsearch.py ~/bin/dirsearch.py
-
-
-# Setup pyrit (optional req for wifite)
-sudo apt-get install python-dev libssl-dev zlib1g-dev libpcap-dev
-sudo pip3 install psycopg2 scapy                
-t
-git clone https://github.com/JPaulMora/Pyrit.git .
-python setup.py clean
-python setup.py build
-sudo python setup.py install
-
-# Setup hcxdumptool (optional req for wifite)
-sudo apt-get install libcurl4-openssl-dev libssl-dev
-t
-git clone https://github.com/ZerBea/hcxdumptool.git .
-make
-sudo make install
-
-# Setup hcxpcaptool (optional req for wifite)
-sudo apt-get install libcurl4-openssl-dev libssl-dev zlib1g-dev
-t
-git clone https://github.com/ZerBea/hcxtools.git .
-make
-sudo make install
-
-# Only needed for the above if wifite is still looking for non-"ng" hcxpcaptool
-sudo ln -s /usr/local/bin/hcxpcapngtool /usr/local/bin/hcxpcaptool
-
-
-# Wordlist
-mkdir ~/wargaming/
-cd ~/wargaming/
-cp cp /usr/share/wordlists/rockyou.txt.gz .
-gunzip rockyou.txt.gz
-
-# Setup QTerminal theme color changes for executables
-sudo cp /usr/share/qtermwidget5/color-schemes/Kali-Dark.colorscheme /usr/share/qtermwidget5/color-schemes/Zoffix-Dark.colorscheme
-sudo sed -i '/\[Color2Intense\]/!b;n;cColor=255,242,0' /usr/share/qtermwidget5/color-schemes/Zoffix-Dark.colorscheme
-# Open QTerminal and tell it to use Zoffix-Dark Theme
-```
-
 #### Desktop Config
 
 * Set `Shift+Alt+Z` for terminal in Settings->Keyboard Application Shortcuts
