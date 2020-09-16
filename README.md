@@ -31,6 +31,9 @@ ChallengeResponseAuthentication no
 PasswordAuthentication no
 UsePAM no
 PermitRootLogin no
+# This is to speed up connect:
+GSSAPIAuthentication yes
+GSSAPIDelegateCredentials no
 ```
 
 ```bash
