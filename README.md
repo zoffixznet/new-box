@@ -49,7 +49,7 @@ sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get -y install build-essential git curl aptitude libssl-dev \
         wget htop zip sqlite3 time gimp dolphin gnome-terminal libcwd-guard-perl \
-        tree dnsutils sshfs
+        tree dnsutils sshfs gcc-multilib
 #
 # Install Perls and load aliases
 #
