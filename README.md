@@ -69,6 +69,15 @@ source ~/.bashrc
 
 echo -e "set tabsize 4\nset tabstospaces" > ~/.nanorc
 
+# Certbot auto
+t
+wget https://dl.eff.org/certbot-auto
+sudo chown root certbot-auto
+sudo chmod 700 certbot-auto
+sudo mv certbot-auto /usr/sbin/
+sudo certbot-auto
+
+# Perl
 perlbrew install perl-5.32.0 --notest -Duseshrplib -Dusemultiplicity
 perlbrew switch perl-5.32.0
 perlbrew install-cpanm
