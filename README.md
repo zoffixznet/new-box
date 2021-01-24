@@ -49,7 +49,9 @@ sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get -y install build-essential git curl aptitude libssl-dev \
         wget htop zip sqlite3 time gimp dolphin gnome-terminal libcwd-guard-perl \
-        tree dnsutils sshfs gcc-multilib apache2 rsync nload rename
+        tree dnsutils sshfs gcc-multilib apache2 rsync nload rename libreoffice  \
+        libpng-dev libgd-dev imagemagick pandoc texlive-latex-base texlive-fonts-recommended \
+        texlive-extra-utils texlive-latex-extra
 #
 # Install Perls and load aliases
 #
