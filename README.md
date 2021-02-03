@@ -83,7 +83,7 @@ sudo certbot-auto
 perlbrew install perl-5.32.0 --notest -Duseshrplib -Dusemultiplicity
 perlbrew switch perl-5.32.0
 perlbrew install-cpanm
-cpanm -vn Mojolicious IO::Socket::SSL
+cpanm -vn Mojolicious IO::Socket::SSL Dist::Zilla::PluginBundle::Author::ZOFFIX
 
 update-perl6
 git clone https://github.com/ugexe/zef /tmp/zef
