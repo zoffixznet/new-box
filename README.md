@@ -94,6 +94,14 @@ zef install Inline::Perl5 WWW
 
 # Basic bash terminal (no git branch). Generated using http://bashrcgenerator.com/
 echo 'export PS1="\[\033[38;5;28m\][\T]\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;183m\]\u\[$(tput sgr0)\]\[\033[38;5;11m\]@\[$(tput sgr0)\]\[\033[38;5;70m\]\h\[$(tput sgr0)\]\[\033[38;5;7m\]:\[$(tput sgr0)\]\[\033[38;5;226m\]\w\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;198m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"' >> ~/.bashrc
+
+# Create PAUSE file:
+touch ~/.pause
+chmod 600 ~/.pause
+pico ~/.pause
+# Enter:
+user ZOFFIX
+password *********************
 ```
 
 ## Manual
