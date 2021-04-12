@@ -73,11 +73,12 @@ echo -e "set tabsize 4\nset tabstospaces" > ~/.nanorc
 
 # Certbot auto
 t
-wget https://dl.eff.org/certbot-auto
-sudo chown root certbot-auto
-sudo chmod 700 certbot-auto
-sudo mv certbot-auto /usr/sbin/
-sudo certbot-auto
+sudo apt install snapd
+sudo snap install core
+sudo snap refresh core
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+sudo certbot --apache
 
 # Perl
 perlbrew install perl-5.32.0 --notest -Duseshrplib -Dusemultiplicity
