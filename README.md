@@ -121,7 +121,7 @@ sudo apt install -fy ./atom* ./chrome*
 
 - `Win+R` - Run Everything
 - `Win+G` - Run Command: `gimp`
-- `Shift+Alt+Z` - Run Command: `gnome-terminal`
+- `Shift+Alt+Z` - Run Command: `gnome-terminal --full-screen`
 - `Ctrl+Shift+F` - Window State: Maximize
 - `Ctrl+Shift+Alt+F` - Window State: Maximize Horizontal
 
