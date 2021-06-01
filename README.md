@@ -59,7 +59,7 @@ sudo apt-get -y install build-essential git curl aptitude libssl-dev \
 git clone https://github.com/rakudo/rakudo/ ~/rakudo
 mkdir ~/bin/
 echo 'source ~/perl5/perlbrew/etc/bashrc' >> ~/.bashrc
-echo 'export PATH="$HOME/rakudo/install/bin:$HOME/rakudo/install/share/perl6/site/bin:$HOME:/bin:$PATH"' >> ~/.bashrc
+echo 'export PATH="$HOME/rakudo/install/bin:$HOME/rakudo/install/share/perl6/site/bin:$HOME/bin:$PATH"' >> ~/.bashrc
 echo 'alias update-perl6='\''
     cd ~/rakudo && git checkout master && git pull &&
     git checkout $(git describe --abbrev=0 --tags) &&
