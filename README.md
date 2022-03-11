@@ -34,6 +34,9 @@ PermitRootLogin no
 # This is to speed up connect:
 GSSAPIAuthentication yes
 GSSAPIDelegateCredentials no
+# This is to stop disconnects
+ServerAliveInterval 60
+ServerAliveCountMax 120
 ```
 
 ```bash
