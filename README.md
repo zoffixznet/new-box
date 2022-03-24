@@ -73,7 +73,9 @@ echo 'source ~/.bash_aliases' >> ~/.bashrc
 source ~/.bashrc
 
 echo -e "set tabsize 4\nset tabstospaces" > ~/.nanorc
-sudo echo -e "set tabsize 4\nset tabstospaces" > /root/.nanorc
+sudo su # simple `sudo echo` doesn't work
+echo -e "set tabsize 4\nset tabstospaces" > /root/.nanorc
+exit
 
 # Certbot auto
 t
