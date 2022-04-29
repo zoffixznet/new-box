@@ -68,7 +68,7 @@ echo 'alias update-perl6='\''
     git checkout $(git describe --abbrev=0 --tags) &&
     perl Configure.pl --gen-moar --gen-nqp --backends=moar &&
     make && make install'\''' >> ~/.bashrc
-wget https://temp.perl6.party/.bash_aliases
+wget https://temp.zoffix.com/.bash_aliases
 echo 'source ~/.bash_aliases' >> ~/.bashrc
 source ~/.bashrc
 
