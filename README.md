@@ -48,6 +48,7 @@ sudo service sshd restart
 *Initial steps missing*
 
 ```bash
+chsh -s /usr/bin/bash
 sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get -y install build-essential git curl aptitude libssl-dev \
