@@ -9,7 +9,7 @@ User:
 adduser zoffix
 usermod -aG sudo zoffix
 su zoffix
-ssh-keygen -t rsa -b 4096 -C 'Box Name'
+ssh-keygen -t rsa -b 4096 -C "$(whoami)@$(hostname)"
 touch ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 cat > ~/.ssh/authorized_keys # paste keys
