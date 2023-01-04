@@ -56,8 +56,10 @@ sudo apt-get -y install build-essential git curl aptitude libssl-dev \
         wget htop zip sqlite3 time gimp dolphin gnome-terminal libcwd-guard-perl \
         tree dnsutils sshfs gcc-multilib apache2 rsync nload rename libreoffice  \
         libpng-dev libgd-dev imagemagick pandoc texlive-latex-base texlive-fonts-recommended \
-        texlive-extra-utils texlive-latex-extra gftp cifs-utils psmisc jq pv
-        
+        texlive-extra-utils texlive-latex-extra gftp cifs-utils psmisc jq pv docker-compose
+
+sudo usermod -aG docker zoffix
+
 # additional dev package
 sudo apt-get -y install default-libmysqlclient-dev
 #
