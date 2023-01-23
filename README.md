@@ -182,3 +182,7 @@ chown <RESTRICTED-USER>:<RESTRICTED-USER> <TARGET-SCP-DIR>
 ## Trouble-Shooting
 
 Glitches with virtual box not loading after reboot: likely a failed video driver. Uninstall all `virtualbox*` Bodhi's packages, then mount the Guest CD from VirtualBox's menus, `sudo mount /dev/cdrom /media/cdrom; cd /media/cdrom` and then run the guest installer from there.
+
+## Disable Outlook Stupid Bar
+
+Inside `Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\ExperimentEcs\Overrides` create string key `Microsoft.Office.Outlook.Hub.HubBar` with string value `false` and restart Outlook.
