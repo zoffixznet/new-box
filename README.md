@@ -77,6 +77,7 @@ echo 'alias update-perl6='\''
     make && make install'\''' >> ~/.bashrc
 wget https://temp.zoffix.com/.bash_aliases
 echo 'source ~/.bash_aliases' >> ~/.bashrc
+echo "PROMPT_COMMAND='history -a'" >>  ~/.bashrc # make command history tracked from all terminals instead of last closed
 source ~/.bashrc
 
 echo -e "set tabsize 4\nset tabstospaces" > ~/.nanorc
