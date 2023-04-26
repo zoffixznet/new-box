@@ -95,8 +95,8 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 sudo certbot --apache
 
 # Perl
-perlbrew install perl-5.36.0 --notest -Duseshrplib -Dusemultiplicity
-perlbrew switch perl-5.36.0
+perlbrew install perl-5.36.1 --notest -Duseshrplib -Dusemultiplicity
+perlbrew switch perl-5.36.1
 perlbrew install-cpanm
 cpanm -vn Mojolicious IO::Socket::SSL Dist::Zilla::PluginBundle::Author::ZOFFIX Dist::Zilla::Plugin::Git::Contributors
 
