@@ -7,7 +7,7 @@ User:
 
 ```bash
 adduser zoffix
-usermod -aG sudo zoffix
+/usr/sbin/usermod -aG sudo zoffix
 su zoffix
 ssh-keygen -t rsa -b 4096 -C "$(whoami)@$(hostname)"
 touch ~/.ssh/authorized_keys
