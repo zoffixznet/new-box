@@ -49,7 +49,9 @@ sudo service sshd restart
 
 ```bash
 chsh -s /usr/bin/bash
-chsh -s /usr/bin/bash zoffix # note: still need to edit .bashrc to remove the dumbass PROMPTALTERNATIVE two-line BS
+chsh -s /usr/bin/bash zoffix # note: still need to edit .bashrc to remove
+                             # the dumbass PROMPTALTERNATIVE two-line BS
+                             # and the NEWLINE_BEFORE_PROMPT=yes
 sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get -y install build-essential git curl aptitude libssl-dev \
