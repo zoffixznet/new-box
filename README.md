@@ -133,6 +133,7 @@ cd nano
 make
 # assumes we've setup ~/bin into PATH before
 ln -s ~/nano/nano ~/bin/nano
+ln -s ~/nano/nano ~/bin/pico
 ```
 
 ## Manual
