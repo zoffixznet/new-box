@@ -121,6 +121,20 @@ user ZOFFIX
 password *********************
 ```
 
+## Nano editor
+
+```bash
+cd ~/
+wget https://www.nano-editor.org/dist/v1.2/nano-1.2.5.tar.gz
+tax -xvvf nano-1.2.5.tar.gz
+mv nano-1.2.5 nano
+cd nano
+./configure
+make
+# assumes we've setup ~/bin into PATH before
+ln -s ~/nano/nano ~/bin/nano
+```
+
 ## Manual
 
 - [Download Atom](https://atom.io/)
