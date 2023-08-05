@@ -50,7 +50,7 @@ sudo service sshd restart
 ```bash
 chsh -s /usr/bin/bash
 chsh -s /usr/bin/bash zoffix # note: still need to edit .bashrc to remove
-                             # the dumbass PROMPTALTERNATIVE two-line BS
+                             # the dumbass PROMPT_ALTERNATIVE two-line BS
                              # and the NEWLINE_BEFORE_PROMPT=yes
 sudo apt-get update
 sudo apt-get -y upgrade
