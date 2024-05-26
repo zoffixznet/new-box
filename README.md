@@ -83,9 +83,7 @@ echo "PROMPT_COMMAND='history -a'" >>  ~/.bashrc # make command history tracked 
 source ~/.bashrc
 
 echo -e "set tabsize 4\nset tabstospaces" > ~/.nanorc
-sudo su # simple `sudo echo` doesn't work
-echo -e "set tabsize 4\nset tabstospaces" > /root/.nanorc
-exit
+echo -e "set tabsize 4\nset tabstospaces" | sudo tee /root/.nanorc
 
 # Certbot auto
 t
