@@ -52,6 +52,7 @@ chsh -s /usr/bin/bash
 chsh -s /usr/bin/bash zoffix # note: still need to edit .bashrc to remove
                              # the dumbass PROMPT_ALTERNATIVE two-line BS
                              # and the NEWLINE_BEFORE_PROMPT=yes
+export DEBIAN_FRONTEND=noninteractive
 sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get -y install build-essential git curl aptitude libssl-dev \
@@ -79,6 +80,7 @@ echo 'alias update-perl6='\''
     make && make install'\''' >> ~/.bashrc
 wget https://temp.zoffix.com/.bash_aliases
 echo 'source ~/.bash_aliases' >> ~/.bashrc
+echo 'export DEBIAN_FRONTEND=noninteractive' >> ~/.bashrc
 echo "PROMPT_COMMAND='history -a'" >>  ~/.bashrc # make command history tracked from all terminals instead of last closed
 source ~/.bashrc
 
