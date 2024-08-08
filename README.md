@@ -112,6 +112,15 @@ zef install Inline::Perl5 WWW
 # Basic bash terminal (no git branch). Generated using http://bashrcgenerator.com/
 echo 'export PS1="\[\033[38;5;28m\][\T]\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;183m\]\u\[$(tput sgr0)\]\[\033[38;5;11m\]@\[$(tput sgr0)\]\[\033[38;5;70m\]\h\[$(tput sgr0)\]\[\033[38;5;7m\]:\[$(tput sgr0)\]\[\033[38;5;226m\]\w\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;198m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"' >> ~/.bashrc
 
+# Advanced bash terminal with git branch:
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+export PS1="\[\033[38;5;28m\][\T]\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;183m\]\u\[$(tput sgr0)\]\[\033[38;5;11m\]@\[$(tput sgr0)\]\[\033[38;5;70m\]\h\[$(tput sgr0)\]\[\033[38;5;7m\]:\[$(tput sgr0)\]\[\033[38;5;226m\]\w\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;198m\]\$(parse_git_branch)\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"
+PROMPT_COMMAND='history -a'
+
+
 # Create PAUSE file:
 touch ~/.pause
 chmod 600 ~/.pause
