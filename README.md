@@ -113,12 +113,21 @@ zef install Inline::Perl5 WWW
 echo 'export PS1="\[\033[38;5;28m\][\T]\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;183m\]\u\[$(tput sgr0)\]\[\033[38;5;11m\]@\[$(tput sgr0)\]\[\033[38;5;70m\]\h\[$(tput sgr0)\]\[\033[38;5;7m\]:\[$(tput sgr0)\]\[\033[38;5;226m\]\w\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;198m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"' >> ~/.bashrc
 
 # Advanced bash terminal with git branch:
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
+# <Set pretty prompt>
+parse_git_branch() { git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1 /'; }
 
-export PS1="\[\033[38;5;28m\][\T]\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;183m\]\u\[$(tput sgr0)\]\[\033[38;5;11m\]@\[$(tput sgr0)\]\[\033[38;5;70m\]\h\[$(tput sgr0)\]\[\033[38;5;7m\]:\[$(tput sgr0)\]\[\033[38;5;226m\]\w\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;198m\]\$(parse_git_branch)\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"
+_TIME='\[$(tput setaf 28)\][\T]\[$(tput sgr0)\]'
+_UATH='\[$(tput setaf 253)$(tput bold)\]\u@\h:\[$(tput sgr0)\]'
+_DIR='\[$(tput setaf 33)$(tput bold)\]\w\[$(tput sgr0)\]'
+_GIT='\[$(tput setaf 198)\]$(parse_git_branch)\[$(tput sgr0)\]'
+_END='\[$(tput setaf 106)$(tput bold)\]\$\[$(tput sgr0)\] '
+
+PS1="${_TIME} ${_UATH}${_DIR}${_GIT}${_END}"
+# </Set pretty prompt>
+
+
 PROMPT_COMMAND='history -a'
+
 
 
 # Create PAUSE file:
