@@ -8,6 +8,7 @@ User:
 ```bash
 adduser zoffix
 /usr/sbin/usermod -aG sudo zoffix
+/usr/sbin/usermod -aG vboxsf zoffix # make VB shares work
 su zoffix
 ssh-keygen -t rsa -b 4096 -C "$(whoami)@$(hostname)"
 touch ~/.ssh/authorized_keys
